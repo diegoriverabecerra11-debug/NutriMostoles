@@ -68,6 +68,105 @@ body {
 .icon { color: var(--primary); margin-bottom: 25px; width: 40px; height: 40px; }
 .read-more { display: block; margin-top: 20px; color: var(--primary); font-size: 0.8rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; }
 
+/* Colores de la marca */
+:root {
+    --primary-red: #e61d2b;
+    --dark-bg: #000000;
+    --card-bg: #111111;
+}
+
+.page-interna {
+    background-color: var(--dark-bg);
+    color: white;
+    padding-top: 80px;
+}
+
+/* Estructura dividida (Texto izquierda, Imagen derecha) */
+.main-split {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 85vh;
+    padding: 0 8%;
+    gap: 50px;
+}
+
+.content-left {
+    flex: 1;
+    max-width: 600px;
+}
+
+.content-right {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+/* Tipografía estilo imagen */
+h1 {
+    font-size: 4rem;
+    font-weight: 900;
+    line-height: 1;
+    margin: 10px 0 30px;
+}
+
+.highlight { color: var(--primary-red); }
+
+.sub-title {
+    color: var(--primary-red);
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+}
+
+/* Lista de checks */
+.check-list {
+    list-style: none;
+    margin: 30px 0;
+}
+
+.check-list li {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+}
+
+.icon-red { color: var(--primary-red); }
+
+/* Botón rojo sólido */
+.btn-cta {
+    background-color: var(--primary-red);
+    color: white;
+    padding: 15px 35px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 900;
+    display: inline-block;
+    transition: 0.3s;
+}
+
+.btn-cta:hover { transform: scale(1.05); }
+
+/* Estilo de la imagen derecha */
+.image-wrapper img {
+    width: 100%;
+    max-width: 550px;
+    border-radius: 20px;
+    box-shadow: 0 0 30px rgba(230, 29, 43, 0.2);
+}
+
+/* Responsivo para móviles */
+@media (max-width: 900px) {
+    .main-split {
+        flex-direction: column;
+        text-align: center;
+        padding-top: 50px;
+    }
+    .check-list li { justify-content: center; }
+}
+
 /* Info Section & Contact Details */
 .info-section { padding: 100px 5%; }
 .info-container { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: start; }
@@ -94,3 +193,4 @@ footer { text-align: center; padding: 50px; border-top: 1px solid #222; color: #
     .nav-links { display: none; }
     .map-container { height: 350px; position: static; }
 }
+
